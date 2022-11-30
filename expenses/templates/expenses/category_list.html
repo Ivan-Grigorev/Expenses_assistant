@@ -1,26 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-<a href="{% url 'expenses:category-create' %}">add</a>
+{% load static %}
 
-<table border="1">
-	<thead>
+<link rel="stylesheet" href="{% static 'css/category_list.css' %}">
+
+<button class="btn-add" onclick="location.href='{% url 'expenses:category-create' %}'">Add</button>
+
+<div class="card-main">
+	<table>
 		<tr>
-			<th>name</th>
-			<th>actions</th>
+			<th>NAME</th>
+			<th>AMOUNT OF EXPENSES</th>
+			<th>ACTIONS</th>
 		</tr>
-	</thead>
-	<tbody>
-		{% for obj in object_list %}
+		{% for obj in expenses_amount %}
 		<tr>
-			<td>
-				{{obj.name}}
-			</td>
+			<td>{{ obj.name }}</td>
+			<td>{{ obj.amount }}</td>
 			<td>
 				<a href="{% url 'expenses:category-delete' obj.id %}">delete</a>
 			</td>
 		</tr>
 		{% endfor %}
-	</tbody>
-</table>
+	</table>
+</div>
 {% endblock %}

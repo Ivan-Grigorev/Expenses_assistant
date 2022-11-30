@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/generic_update.css' %}">
 
-<form method="post" action="">
-  {% csrf_token %}
-  {{form.as_p}}
-  <button type="submit">save</button>
-</form>
-
+<div class="card-main">
+  <form method="POST" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn-save" type="submit">Save</button>
+  </form>
+</div>
 {% endblock %}

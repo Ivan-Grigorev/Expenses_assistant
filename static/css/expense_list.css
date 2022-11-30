@@ -1,0 +1,79 @@
+.btn_add {
+    margin: 20px 0 20px 50px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.card_main {
+    margin: 30px auto 10% auto;
+    padding: 20px;
+    width: 60%;
+    height: auto;
+    min-height: 500px;
+    background: #D3D3D3;
+    border-radius: 10px;
+}
+
+.search_area {
+    margin-left: 50px;
+    width: 90%;
+    height: 330px;
+    display: flex;
+}
+
+.btn_search {
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.btn_clear {
+    margin: 10px 0 20px 50px;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+input {
+    font-size: 15px;
+    float: right;
+}
+
+caption {
+    margin: 0 0 10px 0;
+    font-family: bold;
+}
+
+#table, #table_total {
+    margin: 0 auto 30px auto;
+    width: 90%;
+    border: solid 2px;
+}
+
+#table, tr, td {
+    border: solid 2px;
+}
+
+.table_total_field, .table_summary_field {
+    width: 500px;
+}
+
+#table_summary {
+    margin: 20px auto 50px auto;
+    width: 90%;
+    border: solid 2px;
+}
+
+#table_total_year_month {
+    margin: 20px auto 50px auto;
+    width: 90%;
+    border: solid 2px;
+}
+
+#table_total_year_month, tr, td {
+    border: solid 2px;
+}

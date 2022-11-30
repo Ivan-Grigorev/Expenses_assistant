@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+{% load static %}
+<head>
     <title>{% block meta_title %}Expenses app{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  </head>
-  <body>
-	<a href="{% url 'expenses:expense-list' %}">Expenses</a> | 
-	<a href="{% url 'expenses:category-list' %}">Categories</a> | 
-	<hr>
-    {% block content %}{% endblock %}
-  </body>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Roboto'>
+</head>
+<body>
+    <header>
+        <a href="{% url 'expenses:expense-list' %}">Expenses</a> |
+        <a href="{% url 'expenses:category-list' %}">Categories</a> |
+    </header>
+    {% block content %}
+
+    {% endblock %}
+</body>
 </html>
